@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css ">
+    <title>SignUp</title>
+</head>
+<body>
+    <section class="">
+        <div id="login"  class="login__container">
+            <img src="img/logo.svg" alt="Logo" class="logo">
+            <form id="emailForm">
+                <div class="input-field">
+                    <label for="email" ><span>Email</span></label>
+                    <input type="text" id="email" name="email" placeholder="Sample@gmail.com">
+                    <small id="email-error"></small>
+                </div>
+                
+                <button class="button__sign">Sign up</button>
+
+                <p class="account">Don’t have an account? <span>Sign in</span></p>
+    
+                <div class="hr__container">
+                    <hr>
+                        <p  class="login__with">Or login with:</p>
+                    <hr>
+                </div>
+    
+            </form>
+            <div  class="sigin__container">
+    
+                <div class="buttons__container">
+                    <button type="button" class="button__login" onclick="loginWithGoogle()">
+                        <img src="img/facebook.svg" alt="">
+                    </button>
+                    <button type="button" class="button__login" onclick="loginWithGoogle()">
+                        <img src="img/google.svg" alt="">
+                    </button>
+                    <button type="button" class="button__login" onclick="loginWithGoogle()">
+                        <img src="img/apple.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="code_recieve"  class="login__container" style="display: none">
+            <img src="img/logo.svg" alt="Logo" class="logo">
+            <div>
+                <button class="back__btn" onclick="navigateForms('code_recieve', 'login')">
+                    <img src="./img/back.svg" alt="">
+                    Back to login
+                </button>
+            </div>
+            <form id="codeForm">
+                <div class="text-field">
+                    <p>Verify code</p>
+                    <span>An authentication code has been sent to your email.</span>
+                </div>
+                <div class="input-field">
+                    <label for="code" ><span>Enter code</span></label>
+                    <input type="text" id="code" name="code" value="" placeholder="31241231MMSASD">
+                    <small id="code-error"></small>
+                    <p class="code__resend">Didn’t receive a code? <span>Resend</span> </p>
+                </div>
+                
+                <button class="button__sign" >
+                    Continue
+                    <img src="/img/arrow.svg" alt="">
+                </button>
+                <p class="account">Don’t have an account? <span>Sign in</span></p>
+            </form>
+        </div>
+
+        <div id="form_confirm"  class="login__container" style="display: none">
+            <img src="img/logo.svg" alt="Logo" class="logo">
+            <div>
+                <button class="back__btn" onclick="navigateForms('form_confirm', 'login')">
+                    <img src="./img/back.svg" alt="">
+                    Back to login
+                </button>
+            </div>
+            <form id="loginForm">
+
+                <div class="input-field">
+                    <label for="email" ><span>Email</span></label>
+                    <input type="text" id="emailStep3" name="email" readonly>
+                    <small id="email-error"></small>
+                </div>
+                
+                <div class="input-field">
+                    <label for="password"><span>Password</span></label>
+                    <input type="password" id="password" name="password" >
+                    <small id="password-error"></small>
+                </div>
+
+                <div class="input-field">
+                    <label for="confirm-password"><span>Confirm password</span></label>
+                    <input type="password" id="confirm-password" name="confirm-password" >
+                    <small id="confirm-password-error"></small>
+                </div>
+
+                <div class="news">
+                    <input type="checkbox" name="agree">
+                    Subscription to newsletters from the site
+                </div>
+
+                <p class="agreement">By clicking on the “Sign up” you agree to all the <span>Terms</span> and <span>Privacy Policy</span></p>
+                
+                <button type="submit" class="button__sign">
+                    Sign up
+                </button>
+                <p class="account">Already have an account? <span>Sign up</span></p>
+            </form>
+        </div>
+        
+    </section>
+    <script src="./js/main.js"></script>
+</body>
+</html>
